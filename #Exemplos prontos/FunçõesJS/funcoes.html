@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+
+<body>
+    <script>
+
+
+        let largura = prompt('Digite a largura do terreno em metros')
+        let comprimento = prompt('Digite o comprimento do terreno em metros')
+        
+        let area = calcularAreaTerreno(largura, comprimento)
+        document.write('O terreno possui ' + area + ' m²')
+
+        function calcularAreaTerreno(largura, comprimento) {  /*Não, necessáriamente esses parâmetros precisam
+            ser passados "(largura, comprimento)", isto é uma caracteristica própria de Javascript  */
+
+            //lógica
+            let area = largura * comprimento;
+
+            return area;
+        }
+
+    </script>
+
+    
+</body>
+
+</html>

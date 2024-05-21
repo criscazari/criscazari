@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+
+<body>
+    <script>
+        function soma(a, b){ //definimos 2 parâmetros para função soma
+           // b = b ===undefined ? 0 : b// se b for undefinied passa a valer zero(?) se não (:) valera b
+            return a + b
+        }
+
+        console.log(soma(7,7)) //passando 2 parâmetros, ok
+        console.log(soma(7)) // passando 1 parâmetro será retornado NaN(Not a number) pois o segundo valor sera undefined
+        console.log(soma(7,7,9,15)) //passando 4 parâmetros
+        /*Ao passar mais parâmetros do que foi declarado anteriormente
+        a aplicação não quebra(não da erro), não apresenta erros, apenas desconsidera
+        o que está fora dos parametros, devido a flexibilidade do JS   */
+        console.log(soma()) //undefinied + undefinied será retornado NaN(Not a number)
+
+    </script>
+
+    
+</body>
+
+</html>

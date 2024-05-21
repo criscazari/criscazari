@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //3 escopos: global, função e o bloco
+        //Global: Escopo do script como um todo
+        //Bloco: Escopo onde estão contidas instruções dentro dos comandos ex: if e/ou switch {}
+        //Função: Escopo inserido dentro de um bloco de função(que funcionam como sub-programas{})
+        
+        //Exemplo de escopo global
+        let serie = 'Friends'
+
+        //Exemplo de escopo de bloco
+        if(true){
+            var serie2 = 'The Flash' /*ao utilizar 'var' invés de let, 
+            a variavel realiza um hoisting e é puxada para o escopo global
+            do script*/
+            document.write(serie)
+        }
+        document.write(serie2)
+        document.write('<br/>')
+        
+        //Exemplo de escopo de função. Escopo de função é separado do escopo global
+        function x(){ /*Escopo de função não eleva a variavel para o escopo global*/
+            var serie3 = 'Dexter' //Neste caso não ira ocorrer o hoisting
+            document.write(serie)
+            document.write(serie2)
+        }
+        x() //chamando a função
+        document.write('<br/>')
+        document.write(serie3) //não irá ser printado pois não esta no escopo global
+
+    </script>
+</body>
+</html>

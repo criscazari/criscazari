@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo IMC</title>
+</head>
+<body>
+    <h1>Calculo de Indice de Massa Corporal</h1>
+    <hr>
+    <script>
+        let nome = prompt('Informe seu nome: ');
+        let altura = prompt('Informe sua altura em CM: ');
+        let peso = prompt('Informe seu peso corporal em KG: ');
+
+        altura = parseFloat(altura);
+        peso = parseFloat(peso);
+
+        altura = altura / 100;
+
+        //Calculo IMC
+        let imc = peso/(altura*altura);
+
+        let indiceimc = '';
+
+        if(imc < 16){
+            indiceimc = 'Peso muito baixo, GRAVE';
+        }
+        /*Em JavaScript, a instrução "if" é usada para testar uma condição. 
+        A instrução "else if" é usada para testar uma nova condição após um "if", 
+        mas somente se a condição no "if" anterior for falsa.*/
+
+        else if(imc >= 16 && imc<=16.99){
+            indiceimc = 'Peso baixo, GRAVE';
+        }
+
+        else if(imc >= 17 && imc<=18.49){
+            indiceimc = 'Peso baixo';
+        }
+
+        else if(imc >= 18.50 && imc<=24.99){
+            indiceimc = 'Peso NORMAL';
+        }
+
+        else if(imc >= 25 && imc <=29.99){
+            indiceimc = 'Sobrepeso';
+        }
+
+        else if(imc >= 30 && imc<=34.99){
+            indiceimc = 'Obesidade grau I';
+        }
+
+        else if(imc >= 35 && imc<=39.99){
+            indiceimc = 'Obesidade grau II';
+        } else{
+            indiceimc = 'Obesidade grau III';
+        }
+
+        document.write('<strong>'+nome +'</strong>'+ ' seu indice de massa corporal é:  <strong>' + imc.toFixed(2) + '</strong>  sendo assim sua classificação no momento é:  <strong>' + indiceimc + '</strong>');
+        
+    </script>
+    <hr>
+    <div>
+        <p>Para que serve o cálculo do Índice de Massa Corporal?
+        O IMC é um dos parâmetros utilizados para classificar a composição corporal de uma pessoa. Isso porque ele avalia se o peso está adequado para a estatura. Por isso, não é incomum que ele seja aferido durante exames de check-up, por exemplo.</p>
+        
+        <p>Estudos científicos demonstram que os indivíduos que se afastam da faixa adequada ou recomendada do IMC, seja para mais ou para menos, apresentam maior risco de complicações para a saúde e também de mortalidade.
+        </p>
+        <p>Embora seja uma ferramenta importante e reconhecida mundialmente, o IMC não informa sobre a circunferência abdominal, a distribuição da gordura corporal e a massa muscular.
+        </p>
+        Atualmente, essas medidas também são reconhecidas como informações relevantes e importantes para a análise de composição corporal por demonstrarem relação com o risco de problemas cardiovasculares e para a saúde em geral.
+        <br>
+
+    <p><strong>IMC feminino e masculino: tem diferença? </strong></p>
+        <p>O IMC feminino é calculado com a mesma fórmula matemática usada para indivíduos do sexo masculino: peso/(altura x altura).</p>
+    </div>
+
+</body>
+</html>
